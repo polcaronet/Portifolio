@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="/style.css">
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <title>Desenvolvedor Full Stack!</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <nav class="nav-bar">
+    <div class="logo">
+      <div class="header-icons" data-aos="fade-down">
+        <a href="https://www.instagram.com/polcaronet/">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.facebook.com/anselmo.polcaro/">
+          <i class="fa-brands fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/anselmo-polcaro-ribeiro-b2a570207/">
+          <i class="fa-brands fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/polcaronet">
+          <i class="fa-brands fa-github fa-2x"></i>
+        </a>
+      </div>
+    </div>
+    <div class="nav-list">
+      <ul>
+        <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="/hobbies.html" class="nav-link">Hobbies</a></li>
+        <li class="nav-item"><a href="/sobre.html" class="nav-link">Sobre</a></li>
+      </ul>
+    </div>
+    <div class="login-button">
+    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSDXXnSTtVHxfHRszLcWwSJkSrKGlGhdhpLLmbRzPSnCFjWCgRGbFXDFjXXMSpFHddTpfQCM">
+      <i class=" fa fa-envelope-square fa-2x"></i>
+      </a>
+    </div>
+    <div class="mobile-menu-icon">
+      <button onclick="menuShow()"><img class="icon" src="/assets/menu_white_36dp.svg" alt="Menu Show"></button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <ul>
+      <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="/hobbies.html" class="nav-link">Hobbies</a></li>
+      <li class="nav-item"><a href="/sobre.html" class="nav-link">Sobre</a></li>
+    </ul>
+    <div class="login-button">
+    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSDXXnSTtVHxfHRszLcWwSJkSrKGlGhdhpLLmbRzPSnCFjWCgRGbFXDFjXXMSpFHddTpfQCM">
+      <i class=" fa fa-envelope-square fa-2x"></i>
+      </a>
+    </div>
+  </div>
+  <div class="bg-home">
+    <header>
+      <main class="hero container" data-aos="fade-up" data-aos-delay="400">
+        <h3>Olá, meu nome é</h3>
+        <h1 class="">Anselmo Polcaro</h1>
+        <span>
+          <p id="typing">
+          </p>
+        </span>
+      </main>
+    </header>
+  </div>
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container about-content">
+      <div data-aos="zoom-in" data-aos-delay="100">
+        <img src="/assets/Dev-Anselmo_computer.svg" alt="Imagem sobre Anselmo" />
+      </div>
+      <div class="about-description" data-aos="zoom-out-left" data-aos-delay="250">
+          
+      </div>
+    </div>
+  </section>
+   <!-- SERVICES -->
+  
+   <section class="services">
+    <div class="services-content container">
+      <h2>Projects</h2>
+       <p class="tooltip-text">Executo tarefas referente ao que vou aprendendo em linguagens de programação: <strong><span class="color-1"> HTML</span>,
+        <span class="color-2">CSS</span>,<span class="color-3">SCSS</span>,<span class="color-11">TAILWIND</span>,<span class="color-4">JAVASCRIPT</span>,
+        <span class="color-9">JAVA</span>,<span class="color-10">PYTHON</span>,<span class="color-5">TYPESCRIPT</span>,<span class="color-6">NODEJS</span>,
+        <span class="color-7">REACTJS</span>,<span class="color-8">NEXTJS</span>,<span class="color-12">ANGULAR</span>,<span class="color-13">VUEJS.</span></strong>
+         e ainda estou estudando mais. Sou novo na área de desenvolvedor e abaixo estão alguns projestos que andei reproduzido das aulas. 
+       </p>
+    </div>
+  </section>
+  
+  <!-- SLIDER -->
+  <div class="slider">
+    <div class="slides">
+  <!-- Radio Buttons -->
+    <input type="radio" name="raio-btn" id="radio1">
+    <input type="radio" name="raio-btn" id="radio2">
+    <input type="radio" name="raio-btn" id="radio3">
+    <input type="radio" name="raio-btn" id="radio4">
+    <input type="radio" name="raio-btn" id="radio5">
+    <input type="radio" name="raio-btn" id="radio6">
+    <input type="radio" name="raio-btn" id="radio7">
+    <input type="radio" name="raio-btn" id="radio8">
+    <input type="radio" name="raio-btn" id="radio9">
+    <!-- Fim Radio Buttons -->
+
+    <!-- Slide images -->
+    <div class="slide first">
+      <a href="https://dev-burger-delta.vercel.app/" target="_self"><img src="/Mini-preview/Dev-burguer.png"
+          title="Dev-burguer" alt="Image 1" target="_self"></a>
+    </div>
+    <div class="slide">
+      <a href="https://barber-amber-seven.vercel.app/" target="_self"><img src="/Mini-preview/Dev-Barber.png"
+          title="Dev-carros" alt="Imagem 2" target="_self" /></a>
+    </div>
+    <div class="slide">
+      <a href="https://polcaronet.github.io/Calcular/" target="_self"><img
+          src="/Mini-preview/Dev-combustivel-calcular.png" title="Dev-calcular" alt="Imagem 3" target="_self" /></a>
+    </div>
+    <div class="slide">
+      <a href="https://cripto-beryl.vercel.app/" target="_self"><img src="/Mini-preview/Dev-currency.png"
+          title="Dev-currency" alt="Imagem 4" target="_self" /></a>
+    </div>
+    <div class="slide">
+      <a href="https://art-five-rho.vercel.app/" target="_self"><img src="/Mini-preview/Dev-damiao-martins.png"
+          alt="Imagem 5" title="Dev-damiao-martins" target="_self" /></a>
+    </div>
+    <div class="slide">
+      <a href="https://polcaronet.github.io/Gerar-Frases/" target="_self"><img src="/Mini-preview/Dev-frases.png"
+          title="Dev-frases" alt="Imagem 6" target="_self" /></a>
+    </div>
+    <div class="slide">
+      <a href="https://daly-games-ebon.vercel.app/" target="_self"><img src="/Mini-preview/Dev-games.png"
+          alt="Imagem 7" title="Dev-games" target="_self" /></a>
+    </div>
+    <div class="slide">
+      <a href="https://dev-motors-kappa.vercel.app/" target="_self"><img src="/Mini-preview/Dev-motors.png"
+          alt="Imagem 8" title="Dev-motors" target="_self" /></a>
+    </div>
+    <div class="slide">
+      <a href="https://tarefas-lilac.vercel.app/" target="_self"><img src="/Mini-preview/Dev-tarefas.png"
+          alt="Imagem 9" title="Dev-tarefas" target="_self" /></a>
+    </div>
+<!-- Fim slide images -->
+
+<!-- Navigation auto -->
+      <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+          <div class="auto-btn5"></div>
+          <div class="auto-btn6"></div>
+          <div class="auto-btn7"></div>
+          <div class="auto-btn8"></div>
+          <div class="auto-btn9"></div>
+       </div>
+
+    </div>
+
+  <div class="manual-navigation">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+      <label for="radio5" class="manual-btn"></label>
+      <label for="radio6" class="manual-btn"></label>
+      <label for="radio7" class="manual-btn"></label>
+      <label for="radio8" class="manual-btn"></label>
+      <label for="radio9" class="manual-btn"></label>
+  </div>
+  
+  </div>
+</section>
+  <!-- FOOTER -->
+   <div class="services">
+   </div>
+  
+     <footer class="footer">
+       <div class="footer-icons">
+        <a href="https://www.instagram.com/polcaronet/">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+         </a>
+         <a href="https://www.facebook.com/anselmo.polcaro/">
+           <i class="fa-brands fa-facebook fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/anselmo-polcaro-ribeiro-b2a570207/">
+           <i class="fa-brands fa-linkedin fa-2x"></i>
+          </a>
+          </a>
+          <a href="https://github.com/polcaronet">
+           <i class="fa-brands fa-github fa-2x"></i>
+          </a>
+       </div>
+
+       <div>
+        <img 
+          src="assets/logo.svg" 
+          alt="Logo IA"
+        />
+       </div>
+       <p>Copyright 2024 | Dev IA - Anselmo Polcaro</p>
+     </footer>
+     <!-- Button whatsapp -->
+     <a 
+       href="https://api.whatsapp.com/send?phone=5521990233983&text=Quero%20fazer%20um%20agendamento%20hoje!"
+       class="btn-whatsapp"
+       target="_blank"
+       data-aos="zoom-in-up"data-aos-delay="400"
+     >
+      <img 
+        src="assets/whatssapp.svg" 
+        alt="Botão whatsapp"
+      >
+      <span class="tooltip-text">
+        Contact
+      </span>
+     </a>
+     <script src="script.js"></script>
+</body>
+
+</html>
+  
