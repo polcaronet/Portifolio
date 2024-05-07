@@ -25,7 +25,7 @@ function nextImage(){
 var typingTime = document.getElementById('typing');
 typing.innerHTML = '';
 var count1 = 0;
-var str ='🎓 student e sou desenvolvedor Full Stack!';
+var str ='🎓 sou estudante e desenvolvedor Full Stack! ';
 var typingTime = setInterval(function() {
   count1 = count1 + 1;
   typing.innerHTML = " " + str.slice(0, count1);
