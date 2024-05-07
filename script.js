@@ -13,7 +13,7 @@ setInterval( function(){
 function nextImage(){
   count++;
   if(count > 9){
-     count = 0;
+     count = 1;
   }
 
   document.getElementById("radio"+count).checked = true;
@@ -44,7 +44,7 @@ var typingTime = setInterval(function() {
       };
     }, 10000000);
   };
-}, 130)
+}, 135)
 
 // MenuShow
 
