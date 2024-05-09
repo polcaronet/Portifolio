@@ -13,7 +13,7 @@ setInterval( function(){
 function nextImage(){
   count++;
   if(count > 9){
-     count = 1;
+     count = 0;
   }
 
   document.getElementById("radio"+count).checked = true;
@@ -25,7 +25,7 @@ function nextImage(){
 var typingTime = document.getElementById('typing');
 typing.innerHTML = '';
 var count1 = 0;
-var str ='🎓 sou estudante e desenvolvedor Full Stack! ';
+var str ='🎓 I am a student and Full Stack developer! ';
 var typingTime = setInterval(function() {
   count1 = count1 + 1;
   typing.innerHTML = " " + str.slice(0, count1);
@@ -44,7 +44,7 @@ var typingTime = setInterval(function() {
       };
     }, 10000000);
   };
-}, 135)
+}, 130)
 
 // MenuShow
 
