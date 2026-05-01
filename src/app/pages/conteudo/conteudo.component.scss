@@ -7,78 +7,66 @@
   border: 1px solid #3a3a4a;
 }
 
+.terminal-accent-bar {
+  height: 3px;
+  background: linear-gradient(90deg, #ff79c6, #bd93f9, #ff79c6);
+}
+
 .terminal-titlebar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #202020;
-  padding: 0;
-  height: 40px;
-  border-bottom: 1px solid #333;
+  background: #1e1e2e;
+  padding: 8px 16px;
+  border-bottom: 1px solid #2a2a3e;
 }
 
 .terminal-tabs {
   display: flex;
   align-items: center;
-  height: 100%;
 }
 
-.terminal-tab {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0 16px;
-  height: 100%;
+.terminal-tab-label {
   font-family: 'Segoe UI', sans-serif;
-  font-size: 0.75rem;
-  color: #888;
-  cursor: default;
-  border-right: 1px solid #333;
-
-  &.active {
-    background: #1e1e2e;
-    color: #fff;
-  }
-}
-
-.terminal-tab-add {
-  padding: 0 12px;
-  color: #888;
-  font-size: 1rem;
-  cursor: default;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+  text-decoration-color: #ff79c6;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
 }
 
 .terminal-winbtns {
   display: flex;
   align-items: center;
-  padding-right: 4px;
+  gap: 10px;
 }
 
 .terminal-winbtn {
-  width: 46px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;
   color: #888;
+  font-size: 0.85rem;
   cursor: default;
 
-  &--close {
-    &:hover {
-      background: #e81123;
-      color: #fff;
-    }
+  svg {
+    display: block;
   }
 }
 
+.terminal-winbtn-text {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.72rem;
+  color: #ccc;
+}
+
 .terminal-body {
-  background: #1e1e2e;
+  background: #1a1b26;
   padding: 20px 24px;
   font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
   font-size: 0.8rem;
-  line-height: 1.8;
-  min-height: 200px;
+  line-height: 1.9;
+  min-height: 220px;
 }
 
 .terminal-line {
@@ -87,21 +75,47 @@
   text-overflow: ellipsis;
 }
 
-.t-prompt {
-  color: #569cd6;
+.t-info {
+  color: #888;
+}
+
+.t-fish {
+  font-size: 0.85rem;
+}
+
+.t-date {
+  color: #e0af68;
+  font-size: 0.78rem;
+}
+
+.t-time {
+  color: #f7768e;
+  font-size: 0.78rem;
+}
+
+.t-circle {
+  color: #9ece6a;
+}
+
+.t-path {
+  color: #e0af68;
+}
+
+.t-arrow {
+  color: #9ece6a;
 }
 
 .t-cmd {
-  color: #dcdcaa;
+  color: #c0caf5;
 }
 
 .t-output {
-  color: #cccccc;
+  color: #a9b1d6;
   padding-left: 16px;
 }
 
 .t-check {
-  color: #4ec9b0;
+  color: #9ece6a;
 }
 
 .t-bold {
@@ -110,24 +124,29 @@
 }
 
 .t-success {
-  color: #4ec9b0;
+  color: #9ece6a;
   font-weight: 500;
 }
 
 .t-progress {
-  color: #6a9955;
-  background: #6a9955;
+  color: #9ece6a;
+  background: #9ece6a;
   border-radius: 2px;
   padding: 0 2px;
   font-size: 0.6rem;
 }
 
 .t-built {
-  color: #4ec9b0;
+  color: #9ece6a;
 }
 
 .t-cursor {
-  color: #fff;
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #c0caf5;
+  vertical-align: middle;
+  margin-left: 2px;
   animation: blink 1s step-end infinite;
 }
 
@@ -408,8 +427,6 @@
   white-space: pre-wrap;
   word-break: break-all;
   position: relative;
-
-  /* Syntax highlighting via CSS — simula Dracula */
   color: #8be9fd;
 
   &::after {
@@ -468,9 +485,8 @@
     overflow-x: auto;
   }
 
-  .terminal-tab {
+  .terminal-tab-label {
     font-size: 0.65rem;
-    padding: 0 10px;
   }
 
   .posts-grid {

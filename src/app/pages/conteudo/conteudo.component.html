@@ -4,30 +4,34 @@
 
       <!-- Header - Terminal Banner -->
       <div class="terminal-banner">
+        <!-- Top accent bar -->
+        <div class="terminal-accent-bar"></div>
         <!-- Title bar -->
         <div class="terminal-titlebar">
           <div class="terminal-tabs">
-            <div class="terminal-tab active">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
+            <span class="terminal-tab-label">TERMINAL</span>
+          </div>
+          <div class="terminal-winbtns">
+            <span class="terminal-winbtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="4 17 10 11 4 5"></polyline>
                 <line x1="12" y1="19" x2="20" y2="19"></line>
               </svg>
-              PowerShell
-            </div>
-            <div class="terminal-tab">cmd</div>
-            <div class="terminal-tab-add">+</div>
-          </div>
-          <div class="terminal-winbtns">
-            <span class="terminal-winbtn">─</span>
-            <span class="terminal-winbtn">□</span>
-            <span class="terminal-winbtn terminal-winbtn--close">✕</span>
+            </span>
+            <span class="terminal-winbtn-text">pwsh</span>
+            <span class="terminal-winbtn">+</span>
           </div>
         </div>
         <!-- Terminal body -->
         <div class="terminal-body">
+          <!-- Prompt block 1 -->
+          <div class="terminal-line t-info">
+            <span class="t-fish">🐟</span>&nbsp;&nbsp;<span class="t-date">📅 01/05/2026</span>&nbsp;&nbsp;<span
+              class="t-time">🕐 19:05:28</span>
+          </div>
           <div class="terminal-line">
-            <span class="t-prompt">PS C:\Users\dev\projects&gt;</span> <span class="t-cmd">flutter doctor</span>
+            <span class="t-circle">○</span> <span class="t-path">E:\P\F\A\Portfolio</span> <span
+              class="t-arrow">~&gt;</span> <span class="t-cmd">flutter doctor</span>
           </div>
           <div class="terminal-line t-output">
             <span class="t-check">[✓]</span> <span class="t-bold">Flutter</span> (Channel stable, 3.22.0)
@@ -44,14 +48,26 @@
           <div class="terminal-line t-output t-success">
             • No issues found!
           </div>
-          <div class="terminal-line" style="margin-top: 8px;">
-            <span class="t-prompt">PS C:\Users\dev\projects&gt;</span> <span class="t-cmd">ng serve</span>
+          <!-- Prompt block 2 -->
+          <div class="terminal-line t-info" style="margin-top: 12px;">
+            <span class="t-fish">🐟</span>&nbsp;&nbsp;<span class="t-date">📅 01/05/2026</span>&nbsp;&nbsp;<span
+              class="t-time">🕐 19:06:03</span>
+          </div>
+          <div class="terminal-line">
+            <span class="t-circle">○</span> <span class="t-path">E:\P\F\A\Portfolio</span> <span
+              class="t-arrow">~&gt;</span> <span class="t-cmd">ng serve</span>
           </div>
           <div class="terminal-line t-output">
             Compiling... <span class="t-progress">████████████</span> <span class="t-built">✓ Built</span>
           </div>
+          <!-- Prompt block 3 (idle) -->
+          <div class="terminal-line t-info" style="margin-top: 12px;">
+            <span class="t-fish">🐟</span>&nbsp;&nbsp;<span class="t-date">📅 01/05/2026</span>&nbsp;&nbsp;<span
+              class="t-time">🕐 19:06:15</span>
+          </div>
           <div class="terminal-line">
-            <span class="t-prompt">PS C:\Users\dev\projects&gt;</span><span class="t-cursor">█</span>
+            <span class="t-circle">○</span> <span class="t-path">E:\P\F\A\Portfolio</span> <span
+              class="t-arrow">~&gt;</span> <span class="t-cursor"></span>
           </div>
         </div>
       </div>
