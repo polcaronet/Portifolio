@@ -19,7 +19,7 @@ export class DataService {
       tags: ['Angular', 'TypeScript', 'SCSS', 'Vercel'],
       stars: 12, forks: 2,
       category: 'Full Stack', status: 'Ativo',
-      github: 'https://github.com/polcaronet', demo: 'https://polcaronet.lovable.app/', highlight: true,
+      github: 'https://github.com/polcaronet', demo: 'https://polcaronet.com.br/', highlight: true,
     },
     {
       title: 'App E-Commerce Flutter',
