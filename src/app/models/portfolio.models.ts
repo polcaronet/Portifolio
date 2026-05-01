@@ -34,6 +34,7 @@ export interface ContentPost {
   tags: string[];
   likes: number;
   link?: string;
+  code?: string;
 }
 
 export interface TimelineItem {

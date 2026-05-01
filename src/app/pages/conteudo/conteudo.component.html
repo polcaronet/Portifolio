@@ -42,8 +42,8 @@
             <span class="tag" *ngFor="let t of post.tags">{{ t }}</span>
           </div>
           <div class="post-footer">
-            <button class="copy-btn" (click)="copyCommand(i, post.title); $event.stopPropagation()"
-              [title]="'Copiar: ' + post.title">
+            <button class="copy-btn" (click)="copyCommand(i, post.code || post.title); $event.stopPropagation()"
+              [title]="post.code ? 'Copiar settings.json' : 'Copiar: ' + post.title">
               <svg *ngIf="copiedIndex !== i" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -53,7 +53,7 @@
                 viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2">
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
-              <span>{{ copiedIndex === i ? 'Copiado!' : 'Copiar' }}</span>
+              <span>{{ copiedIndex === i ? 'Copiado!' : (post.code ? 'Copiar Settings' : 'Copiar') }}</span>
             </button>
           </div>
         </article>
