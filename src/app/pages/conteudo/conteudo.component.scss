@@ -145,13 +145,14 @@
 }
 
 .t-cursor {
-  display: inline-block;
-  width: 2px;
-  height: 15px;
-  background: #c0caf5;
-  vertical-align: middle;
-  margin-left: 2px;
+  color: #c0caf5;
+  font-weight: 100;
+  font-size: 1.1em;
   animation: blink 1s step-end infinite;
+
+  &::after {
+    content: '|';
+  }
 }
 
 @keyframes blink {
