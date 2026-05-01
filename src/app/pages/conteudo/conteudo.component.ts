@@ -41,4 +41,23 @@ export class ConteudoComponent implements OnInit {
     const m: Record<string, string> = { Flutter: 'badge-purple', Angular: 'badge-red', VSCode: 'badge-green', Terminal: 'badge-yellow', Setup: 'badge-pink' };
     return m[cat] ?? 'badge-purple';
   }
+
+  /** Syntax highlight simples para JSON (Dracula colors) */
+  highlightJson(code: string): string {
+    const preview = code.substring(0, 400);
+    return preview
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      // Strings (valores entre aspas)
+      .replace(/"([^"]+)"(\s*:)/g, '<span class="hl-key">"$1"</span>$2')
+      .replace(/:\s*"([^"]+)"/g, ': <span class="hl-string">"$1"</span>')
+      // Booleans
+      .replace(/:\s*(true|false)/g, ': <span class="hl-bool">$1</span>')
+      // Numbers
+      .replace(/:\s*(\d+\.?\d*)/g, ': <span class="hl-num">$1</span>')
+      // Brackets
+      .replace(/([{}[\]])/g, '<span class="hl-bracket">$1</span>')
+      + '<span class="hl-fade">...</span>';
+  }
 }

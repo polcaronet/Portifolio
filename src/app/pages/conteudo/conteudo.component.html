@@ -48,7 +48,7 @@
                 <span class="winbtn winbtn--close">✕</span>
               </span>
             </div>
-            <pre class="code-preview__body">{{ post.code | slice:0:320 }}...</pre>
+            <pre class="code-preview__body" [innerHTML]="highlightJson(post.code!)"></pre>
           </div>
 
           <p class="post-body">{{ post.body }}</p>

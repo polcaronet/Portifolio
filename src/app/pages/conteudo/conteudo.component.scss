@@ -268,8 +268,12 @@
   margin: 0;
   max-height: 180px;
   overflow: hidden;
-  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
   position: relative;
+
+  /* Syntax highlighting via CSS — simula Dracula */
+  color: #8be9fd;
 
   &::after {
     content: '';
@@ -281,4 +285,30 @@
     background: linear-gradient(transparent, #282a36);
     pointer-events: none;
   }
+}
+
+/* ── Syntax Highlighting (Dracula) ─────────────── */
+.hl-key {
+  color: #8be9fd;
+}
+
+.hl-string {
+  color: #f1fa8c;
+}
+
+.hl-bool {
+  color: #bd93f9;
+}
+
+.hl-num {
+  color: #bd93f9;
+}
+
+.hl-bracket {
+  color: #ff79c6;
+}
+
+.hl-fade {
+  color: #6272a4;
+  font-style: italic;
 }
