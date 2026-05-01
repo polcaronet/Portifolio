@@ -2,15 +2,62 @@
   <section class="section">
     <div class="container">
 
-      <!-- Header -->
-      <div class="conteudo-header">
-        <div class="ig-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2">
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
-          </svg>
+      <!-- Header - Terminal Banner -->
+      <div class="terminal-banner">
+        <!-- Title bar -->
+        <div class="terminal-titlebar">
+          <div class="terminal-tabs">
+            <div class="terminal-tab active">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+              PowerShell
+            </div>
+            <div class="terminal-tab">cmd</div>
+            <div class="terminal-tab-add">+</div>
+          </div>
+          <div class="terminal-winbtns">
+            <span class="terminal-winbtn">─</span>
+            <span class="terminal-winbtn">□</span>
+            <span class="terminal-winbtn terminal-winbtn--close">✕</span>
+          </div>
         </div>
+        <!-- Terminal body -->
+        <div class="terminal-body">
+          <div class="terminal-line">
+            <span class="t-prompt">PS C:\Users\dev\projects&gt;</span> <span class="t-cmd">flutter doctor</span>
+          </div>
+          <div class="terminal-line t-output">
+            <span class="t-check">[✓]</span> <span class="t-bold">Flutter</span> (Channel stable, 3.22.0)
+          </div>
+          <div class="terminal-line t-output">
+            <span class="t-check">[✓]</span> <span class="t-bold">Angular CLI</span> (version 17.3.0)
+          </div>
+          <div class="terminal-line t-output">
+            <span class="t-check">[✓]</span> <span class="t-bold">VS Code</span> (version 1.88.1)
+          </div>
+          <div class="terminal-line t-output">
+            <span class="t-check">[✓]</span> <span class="t-bold">Node.js</span> (v20.11.0)
+          </div>
+          <div class="terminal-line t-output t-success">
+            • No issues found!
+          </div>
+          <div class="terminal-line" style="margin-top: 8px;">
+            <span class="t-prompt">PS C:\Users\dev\projects&gt;</span> <span class="t-cmd">ng serve</span>
+          </div>
+          <div class="terminal-line t-output">
+            Compiling... <span class="t-progress">████████████</span> <span class="t-built">✓ Built</span>
+          </div>
+          <div class="terminal-line">
+            <span class="t-prompt">PS C:\Users\dev\projects&gt;</span><span class="t-cursor">█</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header text -->
+      <div class="conteudo-header">
         <div>
           <p class="section-eyebrow">Dicas &amp; Atalhos</p>
           <h1 class="section-title">Dicas de Programação</h1>

@@ -1,22 +1,153 @@
+/* ── Terminal Banner ────────────────────────────── */
+.terminal-banner {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  border: 1px solid #3a3a4a;
+}
+
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #202020;
+  padding: 0;
+  height: 40px;
+  border-bottom: 1px solid #333;
+}
+
+.terminal-tabs {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.terminal-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.75rem;
+  color: #888;
+  cursor: default;
+  border-right: 1px solid #333;
+
+  &.active {
+    background: #1e1e2e;
+    color: #fff;
+  }
+}
+
+.terminal-tab-add {
+  padding: 0 12px;
+  color: #888;
+  font-size: 1rem;
+  cursor: default;
+}
+
+.terminal-winbtns {
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+}
+
+.terminal-winbtn {
+  width: 46px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: #888;
+  cursor: default;
+
+  &--close {
+    &:hover {
+      background: #e81123;
+      color: #fff;
+    }
+  }
+}
+
+.terminal-body {
+  background: #1e1e2e;
+  padding: 20px 24px;
+  font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  min-height: 200px;
+}
+
+.terminal-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.t-prompt {
+  color: #569cd6;
+}
+
+.t-cmd {
+  color: #dcdcaa;
+}
+
+.t-output {
+  color: #cccccc;
+  padding-left: 16px;
+}
+
+.t-check {
+  color: #4ec9b0;
+}
+
+.t-bold {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.t-success {
+  color: #4ec9b0;
+  font-weight: 500;
+}
+
+.t-progress {
+  color: #6a9955;
+  background: #6a9955;
+  border-radius: 2px;
+  padding: 0 2px;
+  font-size: 0.6rem;
+}
+
+.t-built {
+  color: #4ec9b0;
+}
+
+.t-cursor {
+  color: #fff;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
 .conteudo-header {
   display: flex;
   gap: 24px;
   align-items: flex-start;
   margin-bottom: 36px;
-}
-
-.ig-icon {
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0;
-  margin-top: 4px;
-  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  box-shadow: 0 8px 32px rgba(220, 39, 67, 0.3);
 }
 
 .stats-bar {
@@ -188,6 +319,12 @@
     flex-direction: column;
   }
 
+  .terminal-body {
+    font-size: 0.7rem;
+    padding: 16px 18px;
+    min-height: 160px;
+  }
+
   .ig-cta {
     flex-direction: column;
     text-align: center;
@@ -319,9 +456,21 @@
     gap: 12px;
   }
 
-  .ig-icon svg {
-    width: 22px;
-    height: 22px;
+  .terminal-banner {
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .terminal-body {
+    font-size: 0.6rem;
+    padding: 12px 14px;
+    min-height: 140px;
+    overflow-x: auto;
+  }
+
+  .terminal-tab {
+    font-size: 0.65rem;
+    padding: 0 10px;
   }
 
   .posts-grid {
