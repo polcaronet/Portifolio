@@ -1526,8 +1526,8 @@
 /* ══ Banner Dev Flutter ═══════════════════════════ */
 .sobre-hero-section {
   background-image: url('/assets/capa.png');
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: right center;
   background-repeat: no-repeat;
   position: relative;
 
@@ -1535,8 +1535,9 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(244, 243, 255, 0.82);
-    backdrop-filter: blur(2px);
+    background: linear-gradient(to right,
+        var(--bg-primary) 45%,
+        rgba(244, 243, 255, 0.4) 100%);
   }
 
   .container {
@@ -1546,9 +1547,13 @@
 }
 
 [data-theme="blue"] .sobre-hero-section::before {
-  background: rgba(12, 25, 41, 0.85);
+  background: linear-gradient(to right,
+      var(--bg-primary) 45%,
+      rgba(12, 25, 41, 0.5) 100%);
 }
 
 [data-theme="dark"] .sobre-hero-section::before {
-  background: rgba(10, 10, 10, 0.85);
+  background: linear-gradient(to right,
+      var(--bg-primary) 45%,
+      rgba(10, 10, 10, 0.5) 100%);
 }
