@@ -37,6 +37,20 @@
             <span class="badge" [ngClass]="badgeClass(post.category)">{{ post.category }}</span>
           </div>
           <h3 class="post-title">{{ post.title }}</h3>
+
+          <!-- Prévia de código (quando tem code) -->
+          <div class="code-preview" *ngIf="post.code">
+            <div class="code-preview__header">
+              <span class="code-preview__dots">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </span>
+              <span class="code-preview__filename">settings.json</span>
+            </div>
+            <pre class="code-preview__body">{{ post.code | slice:0:320 }}...</pre>
+          </div>
+
           <p class="post-body">{{ post.body }}</p>
           <div class="tags-row">
             <span class="tag" *ngFor="let t of post.tags">{{ t }}</span>
