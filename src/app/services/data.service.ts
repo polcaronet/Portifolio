@@ -123,6 +123,7 @@ export class DataService {
     { icon: 'github', label: 'GitHub', handle: '@polcaronet', href: 'https://github.com/polcaronet', color: '#6c63ff' },
     { icon: 'tiktok', label: 'TikTok', handle: '@anselmopolcaro', href: 'https://www.tiktok.com/@anselmopolcaro', color: '#ff0050' },
     { icon: 'instagram', label: 'Instagram', handle: '@polcaronet', href: 'https://www.instagram.com/polcaronet/', color: '#E4405F' },
+    { icon: 'facebook', label: 'Facebook', handle: 'Anselmo Polcaro', href: 'https://www.facebook.com/anselmo.polcaro/', color: '#1877F2' },
     { icon: 'linkedin', label: 'LinkedIn', handle: 'Anselmo Polcaro Ribeiro', href: 'https://www.linkedin.com/in/anselmo-polcaro-ribeiro-b2a570207/', color: '#0A66C2' },
     { icon: 'whatsapp', label: 'WhatsApp', handle: '+55 21 99573-5177', href: 'https://chat.whatsapp.com/CAK0asIqmrEFLryLTz51WT', color: '#25D366' },
   ];
