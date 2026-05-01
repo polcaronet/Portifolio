@@ -32,8 +32,7 @@ export class ConteudoComponent implements OnInit {
   get totalLikes(): number { return this.all.reduce((s, p) => s + p.likes, 0); }
 
   copyCommand(i: number, content: string): void {
-    const text = content.includes(' — ') ? content.split(' — ')[0] : content;
-    navigator.clipboard.writeText(text).catch(() => { });
+    navigator.clipboard.writeText(content).catch(() => { });
     this.copiedIndex = i;
     setTimeout(() => this.copiedIndex = null, 2000);
   }
