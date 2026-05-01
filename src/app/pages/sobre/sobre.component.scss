@@ -1522,3 +1522,20 @@
     padding: 56px 0 48px;
   }
 }
+
+/* ══ Banner Dev Flutter ═══════════════════════════ */
+.dev-banner {
+  width: 100%;
+  margin-bottom: 40px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1.5px solid var(--border);
+}
+
+.dev-banner__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
