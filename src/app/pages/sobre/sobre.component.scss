@@ -1557,3 +1557,136 @@
       var(--bg-primary) 45%,
       rgba(10, 10, 10, 0.5) 100%);
 }
+
+/* ══ Celulares pequenos (A10s, J7 Prime) ═════════ */
+@media (max-width: 400px) {
+  .sobre-hero {
+    gap: 20px;
+  }
+
+  .avatar-wrap,
+  .avatar-img,
+  .avatar-ring {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-ring {
+    inset: -4px;
+  }
+
+  .gold-badge {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+
+  .sobre-role {
+    font-size: 0.8rem;
+  }
+
+  .icon-links-row {
+    gap: 20px;
+  }
+
+  .icon-link-bubble {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+  }
+
+  .icon-link-bubble svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .icon-link-label {
+    font-size: 0.72rem;
+  }
+
+  .icon-link-sub {
+    font-size: 0.62rem;
+  }
+
+  .live-hero {
+    padding: 48px 0 40px;
+  }
+
+  .live-hero__title {
+    font-size: 1.8rem;
+  }
+
+  .live-hero__sub {
+    font-size: 0.9rem;
+  }
+
+  .prog-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .prog-card {
+    padding: 20px 16px;
+  }
+
+  .prog-card__value {
+    font-size: 1.1rem;
+  }
+
+  .prog-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .content-card {
+    padding: 20px 16px;
+  }
+
+  .community-card {
+    padding: 24px 16px;
+  }
+
+  .community-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .community-card p {
+    font-size: 0.85rem;
+  }
+
+  .traj-section {
+    margin-top: 40px;
+    margin-bottom: 48px;
+  }
+
+  .traj-title {
+    font-size: 1.5rem;
+  }
+
+  .traj-card {
+    padding: 14px 16px;
+    max-width: 100%;
+  }
+
+  .traj-card-title {
+    font-size: 0.88rem;
+  }
+
+  .traj-card-desc {
+    font-size: 0.78rem;
+  }
+
+  .traj-icon-wrap {
+    width: 36px;
+    height: 36px;
+  }
+
+  .traj-icon-wrap svg {
+    width: 16px;
+    height: 16px;
+  }
+}
