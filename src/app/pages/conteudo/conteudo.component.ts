@@ -12,7 +12,7 @@ export class ConteudoComponent implements OnInit {
   filtered: ContentPost[] = [];
   activeCategory = 'Todos';
   copiedIndex: number | null = null;
-  readonly categories = ['Todos', 'VSCode', 'Terminal', 'Flutter', 'Angular'];
+  readonly categories = ['Todos', 'Setup', 'VSCode', 'Terminal', 'Flutter', 'Angular'];
 
   constructor(private data: DataService) { }
 
@@ -39,7 +39,7 @@ export class ConteudoComponent implements OnInit {
   }
 
   badgeClass(cat: string): string {
-    const m: Record<string, string> = { Flutter: 'badge-purple', Angular: 'badge-red', VSCode: 'badge-green', Terminal: 'badge-yellow' };
+    const m: Record<string, string> = { Flutter: 'badge-purple', Angular: 'badge-red', VSCode: 'badge-green', Terminal: 'badge-yellow', Setup: 'badge-pink' };
     return m[cat] ?? 'badge-purple';
   }
 }

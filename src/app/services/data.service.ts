@@ -73,6 +73,11 @@ export class DataService {
   ];
 
   readonly posts: ContentPost[] = [
+    { category: 'Setup', emoji: '🖥️', title: 'Meu Setup VSCode — Fonte e Visual', body: 'Fonte: Edu NSW ACT Foundation + Cascadia Code. Tema: Dracula. Ícones: Mizu. Font size 14.6, line height 1.6, ligatures on. Minimap off, word wrap on.', tags: ['VSCode', 'Setup', 'Fontes'], likes: 0 },
+    { category: 'Setup', emoji: '⚙️', title: 'Meu Setup VSCode — Editor', body: 'Format on save, format on paste, tab size 2, sticky scroll, bracket colorization, smooth scrolling. Cursor: expand + smooth animation.', tags: ['VSCode', 'Setup', 'Produtividade'], likes: 0 },
+    { category: 'Setup', emoji: '🎯', title: 'Meu Setup VSCode — Dart/Flutter', body: 'Closing labels on, Flutter outline on, UI guides on, SDK formatter on. Format on save + fix all on save. Esconde arquivos .freezed.dart e .g.dart.', tags: ['VSCode', 'Flutter', 'Dart'], likes: 0 },
+    { category: 'Setup', emoji: '🎨', title: 'Meu Setup VSCode — Cores customizadas', body: 'Brackets coloridos (laranja, roxo, ciano, verde, rosa, amarelo). Cursor do terminal ciano. Gutter escuro. Light bulb dourado. Tema Dracula com tweaks.', tags: ['VSCode', 'Setup', 'Tema'], likes: 0 },
+    { category: 'Setup', emoji: '📦', title: 'Extensões Flutter que uso', body: 'flutter-dart-utils, flutter-riverpod-snippets, flutter-bloc, flutter-freezed-helper. Essas 4 + Dart oficial = setup completo.', tags: ['VSCode', 'Flutter', 'Extensões'], likes: 0 },
     { category: 'VSCode', emoji: '⌨️', title: 'Ctrl+Shift+P — Paleta de Comandos', body: 'O atalho mais importante do VSCode. Abre a paleta de comandos onde você faz tudo: trocar tema, rodar tasks, instalar extensões.', tags: ['VSCode', 'Atalhos'], likes: 0 },
     { category: 'VSCode', emoji: '🔍', title: 'Ctrl+D — Selecionar próxima ocorrência', body: 'Seleciona a próxima ocorrência da palavra. Perfeito para renomear variáveis rápido sem Find & Replace.', tags: ['VSCode', 'Atalhos'], likes: 0 },
     { category: 'VSCode', emoji: '📋', title: 'Alt+Shift+↓ — Duplicar linha', body: 'Duplica a linha atual para baixo. Economiza tempo absurdo quando precisa repetir padrões de código.', tags: ['VSCode', 'Atalhos'], likes: 0 },
