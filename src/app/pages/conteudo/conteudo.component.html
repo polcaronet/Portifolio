@@ -41,12 +41,12 @@
           <!-- Prévia de código (quando tem code) -->
           <div class="code-preview" *ngIf="post.code">
             <div class="code-preview__header">
-              <span class="code-preview__dots">
-                <span class="dot dot--red"></span>
-                <span class="dot dot--yellow"></span>
-                <span class="dot dot--green"></span>
-              </span>
               <span class="code-preview__filename">settings.json</span>
+              <span class="code-preview__winbtns">
+                <span class="winbtn">─</span>
+                <span class="winbtn">□</span>
+                <span class="winbtn winbtn--close">✕</span>
+              </span>
             </div>
             <pre class="code-preview__body">{{ post.code | slice:0:320 }}...</pre>
           </div>
