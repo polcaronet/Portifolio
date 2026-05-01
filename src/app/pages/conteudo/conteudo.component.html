@@ -1,0 +1,64 @@
+<div class="page">
+  <section class="section">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="conteudo-header">
+        <div class="ig-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <div>
+          <p class="section-eyebrow">Dicas &amp; Atalhos</p>
+          <h1 class="section-title">Dicas de Programação</h1>
+          <p class="section-sub">
+            Atalhos do VSCode, dicas de Flutter, Angular e ferramentas que uso no dia a dia.
+            Tudo direto ao ponto, sem enrolação.
+          </p>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="filter-tabs">
+        <button *ngFor="let cat of categories" class="filter-tab" [class.active]="activeCategory === cat"
+          (click)="setCategory(cat)">
+          {{ cat }}
+        </button>
+      </div>
+
+      <!-- Grid -->
+      <div class="posts-grid">
+        <article class="post-card card" *ngFor="let post of filtered; let i = index">
+          <div class="post-top">
+            <span class="post-emoji">{{ post.emoji }}</span>
+            <span class="badge" [ngClass]="badgeClass(post.category)">{{ post.category }}</span>
+          </div>
+          <h3 class="post-title">{{ post.title }}</h3>
+          <p class="post-body">{{ post.body }}</p>
+          <div class="tags-row">
+            <span class="tag" *ngFor="let t of post.tags">{{ t }}</span>
+          </div>
+          <div class="post-footer">
+            <button class="copy-btn" (click)="copyCommand(i, post.title); $event.stopPropagation()"
+              [title]="'Copiar: ' + post.title">
+              <svg *ngIf="copiedIndex !== i" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <svg *ngIf="copiedIndex === i" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>{{ copiedIndex === i ? 'Copiado!' : 'Copiar' }}</span>
+            </button>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+</div>

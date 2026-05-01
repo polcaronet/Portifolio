@@ -1,0 +1,71 @@
+<nav class="navbar" [class.navbar--scrolled]="scrolled">
+  <div class="navbar__inner">
+
+    <a routerLink="/" class="navbar__logo">
+      <div class="logo__text">
+        <span class="logo__name">Anselmo Polcaro</span>
+        <div class="logo__roles">
+          <span class="logo__role--gold">💻 Dev de Sucesso</span>
+          <span class="logo__sep">·</span>
+          <span class="logo__role--gold">🎙️ Streamer de Sucesso</span>
+        </div>
+      </div>
+    </a>
+
+    <ul class="navbar__links">
+      <li *ngFor="let link of navLinks">
+        <a [routerLink]="link.path" routerLinkActive="navbar__link--active"
+          [routerLinkActiveOptions]="{ exact: link.path === '/' }" class="navbar__link">
+          <span class="nav-icon" [innerHTML]="getIcon(link.icon)"></span>
+          {{ link.label }}
+          <span *ngIf="link.badge" class="nav-badge" [ngClass]="'nav-badge--' + link.badge.type">
+            <span *ngIf="link.badge.type === 'red'" class="glow-dot"></span>
+            {{ link.badge.text }}
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="navbar__actions">
+      <!-- Theme switcher -->
+      <div class="theme-switcher">
+        <button class="theme-dot theme-dot--light" [class.active]="currentTheme === 'light'" (click)="setTheme('light')"
+          aria-label="Tema branco" title="Branco"></button>
+        <button class="theme-dot theme-dot--blue" [class.active]="currentTheme === 'blue'" (click)="setTheme('blue')"
+          aria-label="Tema azul" title="Azul"></button>
+        <button class="theme-dot theme-dot--dark" [class.active]="currentTheme === 'dark'" (click)="setTheme('dark')"
+          aria-label="Tema preto" title="Preto"></button>
+      </div>
+
+      <button class="navbar__hamburger" (click)="toggleMobile()" aria-label="Menu">
+        <svg *ngIf="!mobileOpen" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg *ngIf="mobileOpen" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" [class.mobile-menu--open]="mobileOpen">
+  <ul class="mobile-menu__links">
+    <li *ngFor="let link of navLinks">
+      <a [routerLink]="link.path" routerLinkActive="mobile-link--active"
+        [routerLinkActiveOptions]="{ exact: link.path === '/' }" class="mobile-link">
+        <span class="nav-icon" [innerHTML]="getIcon(link.icon)"></span>
+        {{ link.label }}
+        <span *ngIf="link.badge" class="nav-badge" [ngClass]="'nav-badge--' + link.badge.type">
+          <span *ngIf="link.badge.type === 'red'" class="glow-dot"></span>
+          {{ link.badge.text }}
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
