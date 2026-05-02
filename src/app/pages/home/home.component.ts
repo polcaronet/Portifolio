@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { DataService } from '../../services/data.service';
+import { LiveStatusService } from '../../services/live-status.service';
 import { Project } from '../../models/portfolio.models';
 
 @Component({
@@ -9,6 +11,8 @@ import { Project } from '../../models/portfolio.models';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   featuredProjects: Project[] = [];
+  isLive = false;
+  private liveSub!: Subscription;
 
   readonly skills = [
     { name: 'Flutter', color: '#54C5F8' },
@@ -40,15 +44,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   private isDeleting = false;
   private timer: ReturnType<typeof setTimeout> | null = null;
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService, private liveStatus: LiveStatusService) { }
 
   ngOnInit(): void {
     this.featuredProjects = this.data.projects.filter(p => p.highlight);
+    this.liveStatus.startPolling();
+    this.liveSub = this.liveStatus.status$.subscribe(s => this.isLive = s.isLive);
     this.type();
   }
 
   ngOnDestroy(): void {
     if (this.timer) clearTimeout(this.timer);
+    if (this.liveSub) this.liveSub.unsubscribe();
   }
 
   private type(): void {

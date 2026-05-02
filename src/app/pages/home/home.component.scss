@@ -401,6 +401,77 @@
   }
 }
 
+/* ── Live Badge Home ────────────────────────────── */
+.quick-card--live {
+  border-color: rgba(0, 200, 83, 0.35) !important;
+  box-shadow: 0 4px 24px rgba(0, 200, 83, 0.1) !important;
+  animation: cardGlowLive 3s ease-in-out infinite;
+}
+
+@keyframes cardGlowLive {
+
+  0%,
+  100% {
+    box-shadow: 0 4px 24px rgba(0, 200, 83, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 6px 32px rgba(0, 200, 83, 0.18);
+  }
+}
+
+.live-badge-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+
+  &--on {
+    background: rgba(0, 200, 83, 0.12);
+    color: #00c853;
+    border: 1.5px solid rgba(0, 200, 83, 0.35);
+    box-shadow: 0 0 12px rgba(0, 200, 83, 0.15);
+  }
+
+  &--off {
+    background: rgba(150, 150, 150, 0.08);
+    color: var(--text-muted);
+    border: 1.5px solid rgba(150, 150, 150, 0.2);
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00c853;
+    box-shadow: 0 0 8px #00c853;
+    animation: homeDotPulse 1.5s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+}
+
+@keyframes homeDotPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
+}
+
 /* ── Typing Animation ──────────────────────────── */
 .hero__typing {
   min-height: 48px;

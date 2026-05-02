@@ -95,7 +95,7 @@
           </svg>
         </a>
 
-        <a routerLink="/lives" class="quick-card quick-card--tiktok">
+        <a routerLink="/sobre" class="quick-card quick-card--tiktok" [class.quick-card--live]="isLive">
           <div class="quick-card__icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2">
@@ -106,8 +106,11 @@
             <h3>Batalhas no TikTok</h3>
             <p>Lives, humor e papo 😂</p>
           </div>
-          <span class="nav-badge nav-badge--red">
-            <span class="glow-dot"></span> AO VIVO
+          <span *ngIf="isLive" class="live-badge-home live-badge-home--on">
+            <span class="live-badge-home__dot"></span> AO VIVO
+          </span>
+          <span *ngIf="!isLive" class="live-badge-home live-badge-home--off">
+            OFFLINE
           </span>
         </a>
 
