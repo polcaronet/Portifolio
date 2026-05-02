@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://polcaronet.com.br/sitemap.xml
