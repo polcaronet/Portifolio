@@ -119,6 +119,31 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+
+  .quick-card:nth-child(4),
+  .quick-card:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 901px) {
+  .quick-grid {
+    grid-template-columns: repeat(6, 1fr);
+
+    .quick-card:nth-child(1),
+    .quick-card:nth-child(2),
+    .quick-card:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    .quick-card:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .quick-card:nth-child(5) {
+      grid-column: 4 / span 2;
+    }
+  }
 }
 
 .quick-card {
@@ -154,6 +179,14 @@
 
   &--tiktok::before {
     background: linear-gradient(135deg, rgba(255, 0, 80, 0.08), transparent);
+  }
+
+  &--instagram::before {
+    background: linear-gradient(135deg, rgba(225, 48, 108, 0.08), transparent);
+  }
+
+  &--coins::before {
+    background: linear-gradient(135deg, rgba(245, 166, 35, 0.08), transparent);
   }
 
   &:hover {
@@ -196,6 +229,16 @@
   &--tiktok .quick-card__icon {
     background: rgba(255, 0, 80, 0.12);
     color: var(--accent-tiktok);
+  }
+
+  &--instagram .quick-card__icon {
+    background: linear-gradient(135deg, rgba(225, 48, 108, 0.15), rgba(131, 58, 180, 0.15));
+    color: #E1306C;
+  }
+
+  &--coins .quick-card__icon {
+    background: rgba(245, 166, 35, 0.15);
+    font-size: 1.6rem;
   }
 
   &__text {
