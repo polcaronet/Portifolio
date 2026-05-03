@@ -5,6 +5,13 @@
 
 .page {
   position: relative;
+  background: linear-gradient(180deg,
+      var(--bg-primary) 0%,
+      rgba(108, 99, 255, 0.03) 15%,
+      rgba(0, 196, 140, 0.04) 35%,
+      rgba(255, 101, 132, 0.03) 55%,
+      rgba(108, 99, 255, 0.02) 75%,
+      var(--bg-primary) 100%);
 
   &::before,
   &::after {
