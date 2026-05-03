@@ -14,8 +14,8 @@ export class DataService {
 
   readonly projects: Project[] = [
     {
-      title: 'Portfólio Angular',
-      desc: 'Site de portfólio pessoal desenvolvido com Angular 17 e TypeScript. Design moderno, responsivo e hospedado na Vercel.',
+      title: 'Polcaro',
+      desc: 'Site pessoal desenvolvido com Angular 17 e TypeScript. Design moderno, responsivo e hospedado na Vercel.',
       tags: ['Angular', 'TypeScript', 'SCSS', 'Vercel'],
       stars: 12, forks: 2,
       category: 'Full Stack', status: 'Ativo',
