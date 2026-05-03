@@ -33,7 +33,7 @@
       "destination": "/api/$1"
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!sitemap\\.xml|robots\\.txt|assets|favicon\\.ico).*)",
       "destination": "/index.html"
     }
   ]
