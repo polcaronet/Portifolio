@@ -1204,6 +1204,108 @@
   gap: 20px;
 }
 
+.live-hero__layout {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.live-hero__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.live-hero__right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.live-hero__images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.live-hero__pegasus-wrap {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  animation: pegasusFloat 4s ease-in-out infinite;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 0, 80, 0.2), rgba(108, 99, 255, 0.2));
+    filter: blur(16px);
+    z-index: 0;
+    animation: pegasusGlow 3s ease-in-out infinite alternate;
+  }
+}
+
+.live-hero__pegasus {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 24px rgba(255, 215, 0, 0.3));
+}
+
+@keyframes pegasusFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pegasusGlow {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.live-hero__photo-wrap {
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(255, 0, 80, 0.2);
+  }
+}
+
+.live-hero__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .live-badge {
   display: inline-flex;
   align-items: center;
@@ -1795,6 +1897,31 @@
 
   .live-hero {
     padding: 56px 0 48px;
+  }
+
+  .live-hero__layout {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .live-hero__left {
+    align-items: center;
+  }
+
+  .live-hero__pegasus-wrap {
+    width: 140px;
+    height: 140px;
+  }
+
+  .live-hero__photo-wrap {
+    width: 110px;
+    height: 110px;
+  }
+
+  .live-hero__images {
+    flex-direction: row;
+    gap: 16px;
   }
 }
 

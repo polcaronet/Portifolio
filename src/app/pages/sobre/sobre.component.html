@@ -59,49 +59,66 @@
       <div class="live-hero__orb live-hero__orb--1"></div>
       <div class="live-hero__orb live-hero__orb--2"></div>
     </div>
-    <div class="container live-hero__content">
+    <div class="container live-hero__layout">
 
-      <!-- Streamer Status Card -->
-      <div class="streamer-status" [class.streamer-status--live]="isLive" [class.streamer-status--offline]="!isLive">
-        <div class="streamer-status__indicator">
-          <span class="streamer-status__dot" [class.streamer-status__dot--live]="isLive"
-            [class.streamer-status__dot--offline]="!isLive"></span>
+      <!-- Lado esquerdo — Texto + Status -->
+      <div class="live-hero__left">
+
+        <!-- Streamer Status Card -->
+        <div class="streamer-status" [class.streamer-status--live]="isLive" [class.streamer-status--offline]="!isLive">
+          <div class="streamer-status__indicator">
+            <span class="streamer-status__dot" [class.streamer-status__dot--live]="isLive"
+              [class.streamer-status__dot--offline]="!isLive"></span>
+          </div>
+          <div class="streamer-status__info">
+            <span class="streamer-status__label" [class.streamer-status__label--live]="isLive">{{ statusText }}</span>
+            <span class="streamer-status__sub">{{ statusSub }}</span>
+          </div>
+          <a *ngIf="isLive" href="https://www.tiktok.com/@anselmopolcaro/live" target="_blank" rel="noopener"
+            class="streamer-status__btn streamer-status__btn--live">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            Assistir agora
+          </a>
+          <a *ngIf="!isLive" href="https://www.tiktok.com/@anselmopolcaro" target="_blank" rel="noopener"
+            class="streamer-status__btn streamer-status__btn--offline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            Ativar notificações
+          </a>
         </div>
-        <div class="streamer-status__info">
-          <span class="streamer-status__label" [class.streamer-status__label--live]="isLive">{{ statusText }}</span>
-          <span class="streamer-status__sub">{{ statusSub }}</span>
+
+        <h2 class="live-hero__title">Lives &amp; Batalhas</h2>
+        <p class="live-hero__sub">Toda noite tem live! Batalhas, bate-papo, brincadeiras e às vezes um canto.<br>Vem
+          fazer parte da galera! ⚔️🎙️</p>
+        <div class="live-hero__actions">
+          <a href="https://www.tiktok.com/@anselmopolcaro" target="_blank" rel="noopener" class="btn btn-tiktok btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+            Seguir &#64;anselmopolcaro
+          </a>
         </div>
-        <a *ngIf="isLive" href="https://www.tiktok.com/@anselmopolcaro/live" target="_blank" rel="noopener"
-          class="streamer-status__btn streamer-status__btn--live">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2.5">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
-          Assistir agora
-        </a>
-        <a *ngIf="!isLive" href="https://www.tiktok.com/@anselmopolcaro" target="_blank" rel="noopener"
-          class="streamer-status__btn streamer-status__btn--offline">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-          </svg>
-          Ativar notificações
-        </a>
       </div>
 
-      <h2 class="live-hero__title">Lives &amp; Batalhas</h2>
-      <p class="live-hero__sub">Toda noite tem live! Batalhas, bate-papo, brincadeiras e às vezes um canto.<br>Vem fazer
-        parte da galera! ⚔️🎙️</p>
-      <div class="live-hero__actions">
-        <a href="https://www.tiktok.com/@anselmopolcaro" target="_blank" rel="noopener" class="btn btn-tiktok btn-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2">
-            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-          </svg>
-          Seguir &#64;anselmopolcaro
-        </a>
+      <!-- Lado direito — Imagens -->
+      <div class="live-hero__right">
+        <div class="live-hero__images">
+          <div class="live-hero__pegasus-wrap">
+            <img src="/assets/pegasus.png" alt="Pegasus — Logo das Lives" class="live-hero__pegasus" />
+          </div>
+          <div class="live-hero__photo-wrap">
+            <img src="/assets/eu_formula1.png" alt="Anselmo Polcaro" class="live-hero__photo" />
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
