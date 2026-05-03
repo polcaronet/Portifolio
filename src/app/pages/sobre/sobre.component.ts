@@ -53,7 +53,7 @@ export class SobreComponent implements OnInit, OnDestroy {
         : 'Estou online no TikTok! Vem assistir 🔥';
     } else {
       this.statusText = 'OFFLINE';
-      this.statusSub = 'Não estou em live agora. Ative as notificações! 🔔';
+      this.statusSub = 'Não estou em live agora. Siga pra ser notificado! 🔔';
     }
   }
 
