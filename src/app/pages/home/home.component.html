@@ -7,60 +7,46 @@
       <div class="hero__orb hero__orb--2"></div>
       <div class="hero__orb hero__orb--3"></div>
     </div>
-    <div class="container hero__layout">
+    <div class="container hero__content">
 
-      <!-- Lado esquerdo — Texto -->
-      <div class="hero__content animate-1">
-
-        <div class="hero__tag">
-          <span class="glow-dot green"></span>
-          Disponível para novos projetos
-        </div>
-
-        <h1 class="hero__title animate-2">
-          Olá, sou o<br>
-          <span class="hero__accent">Anselmo Polcaro</span>
-        </h1>
-
-        <div class="hero__typing animate-3">
-          <span class="typing-text">{{ typedText }}</span><span class="typing-cursor">|</span>
-        </div>
-
-        <div class="hero__actions animate-4">
-          <a routerLink="/projetos" class="btn btn-primary">
-            Ver Projetos
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-          <a href="https://www.tiktok.com/@anselmopolcaro" target="_blank" rel="noopener" class="btn btn-tiktok">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2">
-              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-            </svg>
-            TikTok &#64;anselmopolcaro
-          </a>
-          <a routerLink="/contato" class="btn btn-ghost">Contato</a>
-        </div>
-
-        <div class="skills-strip animate-5">
-          <span class="skill-chip" *ngFor="let s of skills" [style.--skill-color]="s.color">
-            <span class="skill-dot" [style.background]="s.color"></span>
-            {{ s.name }}
-          </span>
-        </div>
+      <div class="hero__tag">
+        <span class="glow-dot green"></span>
+        Disponível para novos projetos
       </div>
 
-      <!-- Lado direito — Imagens -->
-      <div class="hero__images animate-5">
-        <div class="hero__pegasus-wrap">
-          <img src="/assets/pegasus.png" alt="Pegasus — Logo" class="hero__pegasus" />
-        </div>
-        <div class="hero__photo-wrap">
-          <img src="/assets/eu_formula1.png" alt="Anselmo Polcaro" class="hero__photo" />
-        </div>
+      <h1 class="hero__title animate-2">
+        Olá, sou o<br>
+        <span class="hero__accent">Anselmo Polcaro</span>
+      </h1>
+
+      <div class="hero__typing animate-3">
+        <span class="typing-text">{{ typedText }}</span><span class="typing-cursor">|</span>
+      </div>
+
+      <div class="hero__actions animate-4">
+        <a routerLink="/projetos" class="btn btn-primary">
+          Ver Projetos
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="https://www.tiktok.com/@anselmopolcaro" target="_blank" rel="noopener" class="btn btn-tiktok">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2">
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+          </svg>
+          TikTok &#64;anselmopolcaro
+        </a>
+        <a routerLink="/contato" class="btn btn-ghost">Contato</a>
+      </div>
+
+      <div class="skills-strip animate-5">
+        <span class="skill-chip" *ngFor="let s of skills" [style.--skill-color]="s.color">
+          <span class="skill-dot" [style.background]="s.color"></span>
+          {{ s.name }}
+        </span>
       </div>
     </div>
   </section>
