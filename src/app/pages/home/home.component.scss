@@ -4,6 +4,23 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  background-image: url('/assets/capa.png');
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+        var(--bg-primary) 45%,
+        rgba(244, 243, 255, 0.85) 65%,
+        rgba(244, 243, 255, 0.5) 80%,
+        rgba(244, 243, 255, 0.3));
+    z-index: 0;
+    pointer-events: none;
+  }
 
   &__bg {
     position: absolute;
@@ -521,6 +538,10 @@
 
 /* ══ RESPONSIVE ════════════════════════════════════ */
 @media (max-width: 900px) {
+  .hero {
+    background-image: none;
+  }
+
   .quick-grid {
     grid-template-columns: 1fr;
   }
@@ -581,8 +602,29 @@
   }
 }
 
+/* ── Capa hero — temas ──────────────────────────── */
+:host-context([data-theme="blue"]) .hero::before {
+  background: linear-gradient(to right,
+      var(--bg-primary) 45%,
+      rgba(12, 25, 41, 0.85) 65%,
+      rgba(12, 25, 41, 0.5) 80%,
+      rgba(12, 25, 41, 0.3));
+}
+
+:host-context([data-theme="dark"]) .hero::before {
+  background: linear-gradient(to right,
+      var(--bg-primary) 45%,
+      rgba(10, 10, 10, 0.85) 65%,
+      rgba(10, 10, 10, 0.5) 80%,
+      rgba(10, 10, 10, 0.3));
+}
+
 /* ── Celulares pequenos ────────────────────────── */
 @media (max-width: 400px) {
+  .hero {
+    background-image: none;
+  }
+
   .hero__content {
     padding: 40px 0;
   }
