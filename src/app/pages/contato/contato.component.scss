@@ -1,3 +1,58 @@
+/* ── Hero orbs background ──────────────────────── */
+:host {
+  display: block;
+}
+
+.page {
+  position: relative;
+}
+
+.page::before,
+.page::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page::before {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #6c63ff, transparent 70%);
+  top: -100px;
+  left: -100px;
+  animation: orbFloat 9s ease-in-out infinite;
+}
+
+.page::after {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #00c48c, transparent 70%);
+  bottom: -50px;
+  right: -80px;
+  animation: orbFloat 11s ease-in-out infinite reverse;
+}
+
+@keyframes orbFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+}
+
 .contato-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -8,6 +63,19 @@
 .contato-left {
   position: sticky;
   top: calc(var(--nav-height) + 24px);
+  animation: fadeInLeft 0.5s ease both;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .contato-desc {
@@ -180,6 +248,20 @@
   flex-direction: column;
   gap: 18px;
   box-shadow: var(--shadow-md);
+  animation: formSlideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.2s;
+}
+
+@keyframes formSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form-title {

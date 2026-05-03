@@ -1,3 +1,58 @@
+/* ── Hero orbs background ──────────────────────── */
+:host {
+  display: block;
+}
+
+.page {
+  position: relative;
+}
+
+.page::before,
+.page::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page::before {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #6c63ff, transparent 70%);
+  top: -100px;
+  right: -80px;
+  animation: orbFloat 9s ease-in-out infinite;
+}
+
+.page::after {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #ff6584, transparent 70%);
+  bottom: 20%;
+  left: -60px;
+  animation: orbFloat 11s ease-in-out infinite reverse;
+}
+
+@keyframes orbFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+}
+
 /* Featured */
 .featured-section {
   margin-bottom: 64px;
@@ -30,6 +85,35 @@
   flex-direction: column;
   gap: 12px;
   border-top: 3px solid var(--accent-primary);
+  animation: cardFadeUp 0.5s ease both;
+
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  &:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes cardFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .featured-top {
@@ -133,9 +217,14 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.28s ease;
 
   &:hover {
     border-color: var(--border-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 32px rgba(108, 99, 255, 0.1);
   }
 }
 
