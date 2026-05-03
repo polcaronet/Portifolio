@@ -10,7 +10,7 @@ export interface LiveStatus {
 
 @Injectable({ providedIn: 'root' })
 export class LiveStatusService implements OnDestroy {
-  private readonly CHECK_INTERVAL = 60_000; // 60 segundos
+  private readonly CHECK_INTERVAL = 45_000; // 45 segundos
   private readonly API_URL = '/api/live-status';
 
   private statusSubject = new BehaviorSubject<LiveStatus>({
