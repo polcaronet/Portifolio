@@ -1,3 +1,18 @@
+/* ── Page gradient background ──────────────────── */
+:host {
+  display: block;
+}
+
+.page {
+  background: linear-gradient(180deg,
+      var(--bg-primary) 0%,
+      rgba(108, 99, 255, 0.03) 15%,
+      rgba(255, 101, 132, 0.04) 35%,
+      rgba(0, 196, 140, 0.03) 55%,
+      rgba(108, 99, 255, 0.02) 75%,
+      var(--bg-primary) 100%);
+}
+
 .hero {
   position: relative;
   min-height: calc(100vh - var(--nav-height));
@@ -6,7 +21,7 @@
   overflow: hidden;
   background-image: url('/assets/capa.png');
   background-size: contain;
-  background-position: right center;
+  background-position: right top;
   background-repeat: no-repeat;
 
   &::before {
@@ -14,10 +29,10 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(to right,
-        var(--bg-primary) 45%,
-        rgba(244, 243, 255, 0.85) 65%,
-        rgba(244, 243, 255, 0.5) 80%,
-        rgba(244, 243, 255, 0.3));
+        var(--bg-primary) 40%,
+        rgba(244, 243, 255, 0.8) 60%,
+        rgba(244, 243, 255, 0.4) 75%,
+        rgba(244, 243, 255, 0.2));
     z-index: 0;
     pointer-events: none;
   }
