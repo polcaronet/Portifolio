@@ -2308,37 +2308,3 @@
     }
   }
 }
-
-/* ── QR Code ─────────────────────────────────── */
-.qr-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.qr-label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.qr-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 400px) {
-  .qr-img {
-    width: 110px;
-    height: 110px;
-  }
-}
