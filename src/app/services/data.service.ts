@@ -5,8 +5,8 @@ import { Project, LiveVideo, ContentPost, TimelineItem, Social, NavLink } from '
 export class DataService {
 
   readonly navLinks: NavLink[] = [
-    { path: '/sobre', label: 'Sobre & Lives', icon: 'user', badge: { text: 'TikTok', type: 'red' } },
-    { path: '/', label: 'Início', icon: 'home' },
+    { path: '/', label: 'Sobre & Lives', icon: 'user', badge: { text: 'TikTok', type: 'red' } },
+    { path: '/inicio', label: 'Início', icon: 'home' },
     { path: '/projetos', label: 'Projetos', icon: 'layers' },
     { path: '/conteudo', label: 'Dicas Dev', icon: 'zap' },
     { path: '/galeria', label: 'Galeria de Arte', icon: 'image' },

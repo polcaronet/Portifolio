@@ -12,11 +12,12 @@ import { TermosComponent } from './pages/termos/termos.component';
 import { GaleriaComponent } from './pages/galeria/galeria.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: SobreComponent },
+  { path: 'inicio', component: HomeComponent },
   { path: 'projetos', component: ProjetosComponent },
   { path: 'lives', redirectTo: 'sobre' },
   { path: 'conteudo', component: ConteudoComponent },
-  { path: 'sobre', component: SobreComponent },
+  { path: 'sobre', redirectTo: '' },
   { path: 'galeria', component: GaleriaComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'privacidade', component: PrivacidadeComponent },
