@@ -7,9 +7,9 @@ export class DataService {
   readonly navLinks: NavLink[] = [
     { path: '/', label: 'Sobre & Lives', icon: 'user', badge: { text: 'TikTok', type: 'red' } },
     { path: '/inicio', label: 'Início', icon: 'home' },
+    { path: '/galeria', label: 'Galeria de Arte', icon: 'image' },
     { path: '/projetos', label: 'Projetos', icon: 'layers' },
     { path: '/conteudo', label: 'Dicas Dev', icon: 'zap' },
-    { path: '/galeria', label: 'Galeria de Arte', icon: 'image' },
     { path: '/contato', label: 'Contato', icon: 'mail' },
   ];
 
